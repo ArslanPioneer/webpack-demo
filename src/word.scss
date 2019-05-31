@@ -1,0 +1,25 @@
+
+@font-face {font-family: "iconfont";
+    src: url('./font/iconfont.eot?t=1559269660619'); /* IE9 */
+    src: url('./font/iconfont.eot?t=1559269660619#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAANsAAsAAAAAB0AAAAMfAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqCJIIOATYCJAMMCwgABCAFhG0HORtXBsgusG3YkyZGJ/OxAIXbdZxS8M4oHr7243fu7r79Kk1MaD5dRBINQiGKRUJlCNVKhlA0E5k36V999iDmZFeO9t0ib7LZUyWW5178tUpArdCrAWSCjTnl5kHkgWYpxRf/Ee+Uaws8s5ZYYN+R//+5nN4KPJy/bTmtSWMt23jUCzAOKKCxNm0MuEAC8oaxC1zCegLdJiXSnKlu7AR2CqtbIJ4obBDY5QxKS3boFGrN2CLea3SmF+kevAu/H38ZdiRNZvU9+7gKg9KfRR9LLCfbuukjZPPZwCaRsQ4oxO1ax1WWcWKdpW5NbaUXA1UR0lzh/y2hVNfXnf7xElFZmb1gGSYTP+0KCX7mAglkUNGJi4BnkDL60kYerprUPTrkMO6y9zWAU2t7vBI3hyB9+DyBLVzzY0189Dponn9ydHz1Edx7+aL4xVQPu/Fy5Tl+3z4rxFefdT9e6WDHL6dePPl5FosfTaLCtWWfbkz5JnOgZPVRt9PDKVwdkZaRVhWBQx86XfbJyK2OfLj6sDISKEp/dP+m+j360wfAxWNZOGahtfO9w9XVyVCsSmtqjkNqPdrVtYBibk5+2/sTe++F1HdC6lF9SOeB7zq7Hu7+O28H3eHhTuBnYABAm+XrXBKmtvyWq/7/b/zfNPW7Fv6zQwHfdSUI+tqs9HMBnXfnDP62rGdJ0RWWMRdV6krNdLbF+l3EMKsbLZZn2Ifx+rHeMUJnTsYg6TABWad5tFDWodFjH6pOx6HbmprJPUYIlqJ0YdUcgDDoHJJ+3yAbdB8tlPfQGPcdqsGwhG6Xw3POHouhOFQIMigJhkPjUEHcSB2zdIiy2wkz6wdFVhHSuokwKWGYlpxaTNcQIxFzDDCNsHQpKaSCG2A12Izo9Ryqgg8TJJO1Uqr5KSm07krJiBuAg9MEYpBEYNCQcZAC4YyoX1lyKH2+HcGY6Q0SLaSaaDdCMFFqh9IkS+2B1miNvUj3conJCCadJFEQJXAGUDWwEXo7wUFqfathBCIl046IqfKloHK0rzZ5fb3h+1ZBN2vpHClyFPWplpvHic34IFcVIwAA') format('woff2'),
+    url('./font/iconfont.woff?t=1559269660619') format('woff'),
+    url('./font/iconfont.ttf?t=1559269660619') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('./font/iconfont.svg?t=1559269660619#iconfont') format('svg'); /* iOS 4.1- */
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-shouye:before {
+    content: "\e73d";
+  }
+  
+  .icon-yaopin:before {
+    content: "\e73f";
+  }
