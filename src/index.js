@@ -11,6 +11,7 @@ img.classList.add(style.icon);
 
 var root=document.getElementById('root');
 var word =document.getElementById('word');
-consele.log(123);
+console.log(123);
+console.log(345);
 word.innerHTML='<div class="iconfont icon-shouye"></div>'
 root.append(img);

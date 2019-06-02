@@ -5,7 +5,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 //plugin 可以在webpack运行到某个时刻的时候，帮助我做一些事情
 module.exports = {
     mode: 'development',
-    devtool:'source-map',
+    devtool:'cheap-module-eval-source-map',
+    //production devtool:'cheap-module-source-map'
     //打包入口
     entry: './src/index.js',
     module: {
@@ -39,7 +40,12 @@ module.exports = {
                 , 'sass-loader', 'postcss-loader']
         }]
     },
-
+    devServer:{
+        contentBase: path.join(__dirname, 'dist'),
+        compress: true,
+        open:true,
+        port: 9000
+    },
     plugins: [
         //打包生成index.html文件
         new HtmlWebpackPlugin({ template: 'src/index.html' }),
