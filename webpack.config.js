@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 //plugin 可以在webpack运行到某个时刻的时候，帮助我做一些事情
 module.exports = {
     mode: 'development',
+    devtool:'source-map',
     //打包入口
     entry: './src/index.js',
     module: {
@@ -53,6 +54,7 @@ module.exports = {
     ],
     //打包输出
     output: {
+        //占位符
         filename: 'dist.js',
         path: path.resolve(__dirname, 'dist')
     }

@@ -10,6 +10,7 @@ img.src=avatar;
 img.classList.add(style.icon);
 
 var root=document.getElementById('root');
-var word =document.getElementById('word')
+var word =document.getElementById('word');
+consele.log(123);
 word.innerHTML='<div class="iconfont icon-shouye"></div>'
 root.append(img);
