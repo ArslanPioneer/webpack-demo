@@ -11,27 +11,27 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map',
     //production devtool:'cheap-module-source-map'
     //打包入口
-    entry: './src/test.js',
+    entry: './src/react.js',
     module: {
         rules: [{
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: "babel-loader",
-                options:{
-                    // "presets": ["@babel/preset-env"]
-                    "plugins": [
-                        [
-                          "@babel/plugin-transform-runtime",
-                          {
-                            "absoluteRuntime": false,
-                            "corejs": 2,
-                            "helpers": true,
-                            "regenerator": true,
-                            "useESModules": false
-                          }
-                        ]
-                      ]
-                }
+                // options:{
+                //     "presets": ["@babel/preset-env"],
+                //     "plugins": [
+                //         [
+                //           "@babel/plugin-transform-runtime",
+                //           {
+                //             "absoluteRuntime": false,
+                //             "corejs": 2,
+                //             "helpers": true,
+                //             "regenerator": true,
+                //             "useESModules": false
+                //           }
+                //         ]
+                //       ]
+                // }
             },
             {
                 test: /\.(jpg|png|gif)$/,
