@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
-const webpack =require('webpack');
+const webpack = require('webpack');
 
 //plugin 可以在webpack运行到某个时刻的时候，帮助我做一些事情
 module.exports = {
@@ -11,9 +11,17 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map',
     //production devtool:'cheap-module-source-map'
     //打包入口
-    entry: './src/index.js',
+    entry: './src/test.js',
     module: {
         rules: [{
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel-loader",
+                options:{
+                    "presets": ["@babel/preset-env"]
+                }
+            },
+            {
                 test: /\.(jpg|png|gif)$/,
                 use: {
                     loader: 'url-loader',
@@ -57,8 +65,8 @@ module.exports = {
         compress: true,
         open: true,
         port: 9000,
-        hot:true,
-        hotOnly:true
+        hot: true,
+        hotOnly: true
     },
     plugins: [
         //打包生成index.html文件

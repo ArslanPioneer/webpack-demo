@@ -4,17 +4,17 @@
 // import './word.scss';
 // import createImg from './createImg';
 // import './style.css';
-import counter from './counter.js';
-import  number from './number.js';
+// import counter from './counter.js';
+// import  number from './number.js';
 
-counter()
-number()
-if(module.hot) {
-    module.hot.accept('./number',()=>{
-        document.body.removeChild(document.getElementById('number'));
-        number();
-    })
-}
+// counter()
+// number()
+// if(module.hot) {
+//     module.hot.accept('./number',()=>{
+//         document.body.removeChild(document.getElementById('number'));
+//         number();
+//     })
+// }
 // createImg();
 // var img =new Image();
 // img.src=avatar;
@@ -34,3 +34,11 @@ if(module.hot) {
 // }
 // word.innerHTML='<div class="iconfont icon-shouye"></div>'
 // root.append(img);
+const arr =[
+   new Promise(()=>{}),
+   new Promise(()=>{}) 
+]
+console.log(123)
+arr.map(item =>{
+    console.log(item);
+})
