@@ -5,7 +5,11 @@ const {
 } = require('clean-webpack-plugin');
 module.exports={
     //打包入口
-    entry: './src/index.js',
+    // entry: './src/index.js',
+    entry:{
+        lodash:'./src/lodash.js',
+        main:'./src/index.js'
+    },
     module: {
         rules: [{
                 test: /\.js$/,
@@ -83,7 +87,7 @@ module.exports={
      //打包输出
      output: {
         //占位符
-        filename: 'dist.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, '../dist')
     }
 }

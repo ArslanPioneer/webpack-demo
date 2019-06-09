@@ -1,1 +1,3 @@
- import _  from 
+
+ console.log(_.join(['a','b','c'],'***'))
+ console.log(_.join(['a','b','c'],'***'))
