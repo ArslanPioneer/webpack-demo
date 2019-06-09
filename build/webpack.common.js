@@ -3,13 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
-const webpack = require('webpack');
-
-//plugin 可以在webpack运行到某个时刻的时候，帮助我做一些事情
-module.exports = {
-    mode: 'development',
-    devtool: 'cheap-module-eval-source-map',
-    //production devtool:'cheap-module-source-map'
+module.exports={
     //打包入口
     entry: './src/index.js',
     module: {
@@ -72,14 +66,6 @@ module.exports = {
             }
         ]
     },
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        compress: true,
-        open: true,
-        port: 9000,
-        hot: true,
-        hotOnly: true
-    },
     plugins: [
         //打包生成index.html文件
         new HtmlWebpackPlugin({
@@ -91,19 +77,13 @@ module.exports = {
             verbose: true,
             // Write Logs to Console
             dry: false,
-            default: ['dist/*']
+            default: ['../dist/*']
         }),
-        //热加载，不刷新浏览器就可以更新页面
-        new webpack.HotModuleReplacementPlugin()
     ],
-    //development 配置tres shaking 时使用
-    // optimization:{
-    //     usedExports:true
-    // },
-    //打包输出
-    output: {
+     //打包输出
+     output: {
         //占位符
         filename: 'dist.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, '../dist')
     }
 }
