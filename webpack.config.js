@@ -96,9 +96,10 @@ module.exports = {
         //热加载，不刷新浏览器就可以更新页面
         new webpack.HotModuleReplacementPlugin()
     ],
-    optimization:{
-        usedExports:true
-    },
+    //development 配置tres shaking 时使用
+    // optimization:{
+    //     usedExports:true
+    // },
     //打包输出
     output: {
         //占位符
