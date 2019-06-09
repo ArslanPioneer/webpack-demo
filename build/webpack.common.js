@@ -7,7 +7,6 @@ module.exports={
     //打包入口
     // entry: './src/index.js',
     entry:{
-        lodash:'./src/lodash.js',
         main:'./src/index.js'
     },
     module: {
@@ -84,6 +83,15 @@ module.exports={
             default: ['../dist/*']
         }),
     ],
+    //代码分割和webpack无关
+    //webpack中实现代码分割，两种方式
+    //1.同步代码，只需要在webpack.common.js中做optimization的配置
+    //2.异步代码(import):异步代码，无需做任何配置，会自动进行代码分割
+    optimization:{
+        splitChunks:{
+            chunks:'all'
+        }
+    },
      //打包输出
      output: {
         //占位符
