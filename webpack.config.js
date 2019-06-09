@@ -11,7 +11,7 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map',
     //production devtool:'cheap-module-source-map'
     //打包入口
-    entry: './src/react.js',
+    entry: './src/index.js',
     module: {
         rules: [{
                 test: /\.js$/,
@@ -96,6 +96,9 @@ module.exports = {
         //热加载，不刷新浏览器就可以更新页面
         new webpack.HotModuleReplacementPlugin()
     ],
+    optimization:{
+        usedExports:true
+    },
     //打包输出
     output: {
         //占位符
