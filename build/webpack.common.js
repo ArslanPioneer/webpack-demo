@@ -88,8 +88,28 @@ module.exports={
     //1.同步代码，只需要在webpack.common.js中做optimization的配置
     //2.异步代码(import):异步代码，无需做任何配置，会自动进行代码分割
     optimization:{
-        splitChunks:{
-            chunks:'all'
+        splitChunks: {
+            //async异步 initial同步 all均可
+            chunks: "async",
+            //引入包大于30kb，作代码分割
+            minSize: 30000,
+            //包使用多少次，才作代码分割
+            minChunks: 1,
+            maxAsyncRequests: 5,
+            maxInitialRequests: 3,
+            automaticNameDelimiter: '~',
+            name: true,
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10
+                },
+            default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true
+                }
+            }
         }
     },
      //打包输出
