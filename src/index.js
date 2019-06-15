@@ -6,6 +6,8 @@ function getComponent() {
     })
 }
 
-getComponent().then(element =>{
-    document.body.appendChild(element)
+document.addEventListener('click',()=>{
+    getComponent().then(element=>{
+        document.body.appendChild(element);
+    })
 })

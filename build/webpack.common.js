@@ -90,7 +90,7 @@ module.exports={
     optimization:{
         splitChunks: {
             //async异步 initial同步 all均可
-            chunks: "async",
+            chunks: "all",
             //引入包大于30kb，作代码分割
             minSize: 30000,
             //包使用多少次，才作代码分割
